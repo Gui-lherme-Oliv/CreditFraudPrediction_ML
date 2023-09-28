@@ -30,6 +30,11 @@ Para a separação em labels (características) e features (rótulos), as labels
 X = df.drop(['index','Time','Class'], axis=1)
 Y = df['Class']
 ```
+Foi definido que 80% dos dados serão utilizados para o treinamento e 20% para teste:
+```
+#separando em dados de treino e de teste
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42, stratify=Y)
+```
 
 ## 4. Treinamento do modelo e avaliação de desempenho
 
