@@ -20,9 +20,9 @@ Foram criados dois dataframes, um para acomodar apenas as observações de fraud
 Os dois dataframes foram unidos (concatenados) em um só, com 984 observações e 33 atributos.
 
 ## 3. Divisão dos dados e seleção do algoritmo
-Foram escolhidas 10 observações para compor o conjunto de dados de validação: 5 de observações fraude e 5 de observações não fraude. Como o conjunto de validação é um conjunto de dados separado, distinto do conjunto de treinamento e do conjunto de teste, que é usado para avaliar o desempenho do modelo durante seu treinamento e ajuste de hiperparâmetros, essas 10 observações foram retiradas do dataframe. Agora o dataframe conta com 974 observações e 33 atributos.
+Foram escolhidas 10 observações para compor o conjunto de dados de validação: 5 de observações fraude e 5 de observações não fraude. Como o conjunto de validação é um conjunto de dados separado, distinto do conjunto de treinamento e do conjunto de teste, essas 10 observações foram retiradas do dataframe. Agora o dataframe conta com 974 observações (487 fraude e 487 não fraude) e 33 atributos; e o dataframe de validação com 10 observações e 33 atributos.
 
-
+Desses atributos do dataframe de validação, quatro ('level_0', 'index', 'Time' e 'Class') não serão utilizados e foram removidos, gerando um dataframe de validação com 10 observações e 29 atributos.
 
 ## 4. Treinamento do modelo e avaliação de desempenho
 
