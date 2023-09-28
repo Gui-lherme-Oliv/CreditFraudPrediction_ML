@@ -10,11 +10,11 @@ O conjunto de dados contém apenas variáveis de entrada numéricas que são o r
 
 ## 2. Limpeza e pré-processamento dos dados
 Foi verificado o seguinte: 
-- O conjunto de dados presente em creditcard.csv possui 284807 observações e 31 atributos, todos numéricos.
+- O conjunto de dados (dataset) presente em creditcard.csv possui 284807 observações e 31 atributos, todos numéricos.
 - Esse dataset não possui valores nulos.
 - A variável alvo (Rótulo) é definida pelo atributo 'Class', que assume valor 1 em caso de fraude e 0 caso contrário.
-- O dataset está bastante desbalanceado: são 284315 observações do tipo não fraude e 492 do tipo fraude.
+- O dataset está bastante desbalanceado: são 284315 observações do tipo não fraude e apenas 492 do tipo fraude.
 
-Para deixar o dataset balanceado foi utilizada a técnica de undersampling (subamostragem). Essa é uma técnica utilizada para equilibrar conjuntos de dados desiguais, mantendo todos os dados na classe minoritária e diminuindo o tamanho da classe majoritária, ou seja
+Foram criados dois dataframes, um para acomodar apenas as observações de fraude e um para as obsservações de não fraude, mas como visto anteriormente o dataset está desbalanceado. Para deixá-lo balanceado foi utilizada a técnica de undersampling (subamostragem). Essa é uma técnica utilizada para equilibrar conjuntos de dados desiguais, mantendo todos os dados na classe minoritária e diminuindo o tamanho da classe majoritária, ou seja, ambos os dataframes agora possuem 492 observações.
 
 
