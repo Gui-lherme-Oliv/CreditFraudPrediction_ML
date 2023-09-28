@@ -21,5 +21,11 @@ Os dois dataframes foram unidos (concatenados) em um só, com 984 observações 
 
 ![df](https://github.com/Gui-lherme-Oliv/FraudeCredito_ML/assets/123426025/10fdb10d-4d1c-4ad9-b63c-063389e6b11a)
 
-## 3. Divisão dos dados
+## 3. Divisão dos dados e seleção do algoritmo
+Foram escolhidas 10 observações para compor o conjunto de dados de validação: 5 de observações fraude e 5 de observações não fraude. Como o conjunto de validação é um conjunto de dados separado, distinto do conjunto de treinamento e do conjunto de teste, que é usado para avaliar o desempenho do modelo durante seu treinamento e ajuste de hiperparâmetros, essas 10 observações foram retiradas do dataframe. Agora o dataframe conta com 974 observações e 33 atributos.
+
+
+
+## 4. Treinamento do modelo e avaliação de desempenho
+
 
