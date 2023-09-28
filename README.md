@@ -17,10 +17,9 @@ Foi verificado o seguinte:
 
 Foram criados dois dataframes, um para acomodar apenas as observações de fraude e um para as observações de não fraude, mas, como visto anteriormente, o dataset está desbalanceado. Para deixá-lo balanceado foi utilizada a técnica de undersampling (subamostragem). Essa é uma técnica utilizada para equilibrar conjuntos de dados desiguais, mantendo todos os dados na classe minoritária e diminuindo o tamanho da classe majoritária, ou seja, ambos os dataframes agora possuem 492 observações.
 
-Os dois dataframes foram unidos (concatenados) em um só, com 984 observações e 31 atributos, com o índice das observações corrigido:
+Os dois dataframes foram unidos (concatenados) em um só, com 984 observações e 33 atributos:
 
+![df](https://github.com/Gui-lherme-Oliv/FraudeCredito_ML/assets/123426025/10fdb10d-4d1c-4ad9-b63c-063389e6b11a)
 
-
-
-
+## 3. Divisão dos dados
 
