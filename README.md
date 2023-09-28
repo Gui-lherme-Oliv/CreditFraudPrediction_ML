@@ -17,12 +17,19 @@ Foi verificado o seguinte:
 
 Foram criados dois dataframes, um para acomodar apenas as observações de fraude e um para as observações de não fraude, mas, como visto anteriormente, o dataset está desbalanceado. Para deixá-lo balanceado foi utilizada a técnica de undersampling (subamostragem). Essa é uma técnica utilizada para equilibrar conjuntos de dados desiguais, mantendo todos os dados na classe minoritária e diminuindo o tamanho da classe majoritária, ou seja, ambos os dataframes agora possuem 492 observações.
 
-Os dois dataframes foram unidos (concatenados) em um só, com 984 observações e 33 atributos.
+Os dois dataframes foram unidos (concatenados) os índices das observações foram corrigidos, gerando um dataframe geral com 984 observações e 32 atributos.
 
 ## 3. Divisão dos dados e seleção do algoritmo
-Foram escolhidas 10 observações para compor o conjunto de dados de validação: 5 de observações fraude e 5 de observações não fraude. Como o conjunto de validação é um conjunto de dados separado, distinto do conjunto de treinamento e do conjunto de teste, essas 10 observações foram retiradas do dataframe. Agora o dataframe conta com 974 observações (487 fraude e 487 não fraude) e 33 atributos; e o dataframe de validação com 10 observações e 33 atributos.
+Foram escolhidas 10 observações para compor o conjunto de dados de validação: 5 observações fraude e 5 observações não fraude. Como o conjunto de validação é um conjunto de dados separado, distinto do conjunto de treinamento e do conjunto de teste, essas 10 observações foram retiradas do dataframe geral. Agora o dataframe geral ("df") conta com 974 observações (487 fraude e 487 não fraude) e 32 atributos; e o dataframe de validação concatenado e com índices corrigidos ("df_val_total") com 10 observações e 33 atributos.
 
 Desses atributos do dataframe de validação, quatro ('level_0', 'index', 'Time' e 'Class') não serão utilizados e foram removidos, gerando um dataframe de validação com 10 observações e 29 atributos.
+
+Para a separação em labels (características) e features (rótulos), as labels ficaram definidas como sendo o dataframe geral sem os atributos 'index', 'Time' e 'Class' que não serão utilizados e as features definidas como sendo o atributo 'Class' do dataframe geral:
+```
+#separando labels e features
+X = df.drop(['index','Time','Class'], axis=1)
+Y = df['Class']
+```
 
 ## 4. Treinamento do modelo e avaliação de desempenho
 
